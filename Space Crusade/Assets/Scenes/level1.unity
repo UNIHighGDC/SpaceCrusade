@@ -192,10 +192,10 @@ MonoBehaviour:
   - {fileID: 909810864}
   enemyObj:
   - {fileID: 6300129372228948223, guid: a9cae041ed00f434a86185ddaaf0aa5c, type: 3}
-  enemyNum: 4
+  enemyNum: 20
   timer: 5
   timerText: {fileID: 2101670619}
-  spawnOffset: 0.5
+  spawnOffset: 0.1
 --- !u!114 &122983333
 MonoBehaviour:
   m_ObjectHideFlags: 0

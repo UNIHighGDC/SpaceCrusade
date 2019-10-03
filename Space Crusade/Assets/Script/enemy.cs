@@ -13,6 +13,7 @@ public class enemy : MonoBehaviour
 	public GameObject deathEffect;
 
 	public AudioSource attackSound;
+    public AudioSource dieSound;
 
 	public scoreCounter scoreCounterRef;
 
@@ -52,8 +53,9 @@ public class enemy : MonoBehaviour
 		Debug.Log("damage taken");
 		if (health <= 0)
 		{
-				Die();
-		}
+            dieSound.Play();
+            Die();  
+        }
 	}
 
 	void Attack()
@@ -64,9 +66,9 @@ public class enemy : MonoBehaviour
 
 	void Die()
 	{
-		scoreCounterRef.totalScore += score;
+
+        scoreCounterRef.totalScore += score;
 		Debug.Log("enemy dead");
-		//Instantiate(deathEffect, transform.position, Quaternion.identity);
 		Destroy(gameObject);
 
 	}
